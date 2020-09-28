@@ -8,11 +8,6 @@ namespace Totten.Solutions.ToBarber.Domain.Features.Employees
 {
     public class Employee : Entity
     {
-        public string Name { get; set; }
-        public string Lastname { get; set; }
-        public string FullName { get; set; }
-        public string Cpf { get; set; }
-        public string Rg { get; set; }
 
         public Guid UserId { get; set; }
         public virtual User User { get; set; }

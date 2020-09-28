@@ -7,15 +7,11 @@ using Totten.Solutions.ToBarber.Infra.CrossCutting.Structs;
 
 namespace Totten.Solutions.ToBarber.Application.Features.Schedules.Handlers
 {
-    public class SchedulingCreate
+    public class SchedulingCreateHandler : IRequestHandler<CreateCommand, Result<Exception, Guid>>
     {
-
-        public class Handler : IRequestHandler<CreateCommand, Result<Exception, Guid>>
+        public async Task<Result<Exception, Guid>> Handle(CreateCommand request, CancellationToken cancellationToken)
         {
-            public async Task<Result<Exception, Guid>> Handle(CreateCommand request, CancellationToken cancellationToken)
-            {
-                throw new Exception();
-            }
+            throw new Exception();
         }
     }
 }

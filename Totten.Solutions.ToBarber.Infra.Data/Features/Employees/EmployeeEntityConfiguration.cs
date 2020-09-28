@@ -12,11 +12,6 @@ namespace Totten.Solutions.ToBarber.Infra.Data.Features.Employees
             builder.ToTable("Employees");
 
             builder.HasKey(employee => employee.Id);
-            builder.Property(employee => employee.Name).IsRequired();
-            builder.Property(employee => employee.Lastname).IsRequired();
-            builder.Property(employee => employee.FullName).IsRequired();
-            builder.Property(employee => employee.Cpf).IsRequired();
-            builder.Property(employee => employee.Rg).IsRequired();
             builder.Property(employee => employee.UpdatedIn);
             builder.Property(employee => employee.CreatedAt).IsRequired();
             builder.Property(employee => employee.Version).IsRequired();

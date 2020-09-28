@@ -14,6 +14,12 @@ namespace Totten.Solutions.ToBarber.Infra.Data.Features.Users
             builder.Property(user => user.Login).IsRequired();
             builder.Property(user => user.Password).IsRequired();
             builder.Property(user => user.Email).IsRequired();
+            builder.Property(user => user.Name).IsRequired();
+            builder.Property(user => user.Lastname).IsRequired();
+            builder.Property(user => user.FullName).IsRequired();
+            builder.Property(user => user.Cpf).IsRequired();
+            builder.Property(user => user.Rg).IsRequired();
+            builder.Property(user => user.LastLogin);
             builder.Property(user => user.UpdatedIn);
             builder.Property(user => user.CreatedAt).IsRequired();
             builder.Property(user => user.Version).IsRequired();

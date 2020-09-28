@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Totten.Solutions.ToBarber.WebApi", "Totten.Solutions.ToBarber\Totten.Solutions.ToBarber.WebApi.csproj", "{51FB895B-769A-42BD-BDEB-52B231B7117A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Totten.Solutions.ToBarber.WebApi", "Totten.Solutions.ToBarber\Totten.Solutions.ToBarber.WebApi.csproj", "{51FB895B-769A-42BD-BDEB-52B231B7117A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Totten.Solutions.ToBarber.Domain", "Totten.Solutions.ToBarber.Domain\Totten.Solutions.ToBarber.Domain.csproj", "{1CC0C03D-3C11-4C1A-89F0-12983734146C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Totten.Solutions.ToBarber.Domain", "Totten.Solutions.ToBarber.Domain\Totten.Solutions.ToBarber.Domain.csproj", "{1CC0C03D-3C11-4C1A-89F0-12983734146C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Api", "1. Api", "{A14CE14C-2104-47B4-95B0-0ADB8C2FDD8F}"
 EndProject
@@ -19,11 +19,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 CrossCutting", "4.1 Cro
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 Data", "4.2 Data", "{951861D7-A46F-449A-97B2-D34478B07174}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Totten.Solutions.ToBarber.Infra.Data", "Totten.Solutions.ToBarber.Infra.Data\Totten.Solutions.ToBarber.Infra.Data.csproj", "{EC1F8BCC-44F9-42C8-8842-BDA3946A2958}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Totten.Solutions.ToBarber.Infra.Data", "Totten.Solutions.ToBarber.Infra.Data\Totten.Solutions.ToBarber.Infra.Data.csproj", "{EC1F8BCC-44F9-42C8-8842-BDA3946A2958}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Totten.Solutions.ToBarber.Application", "Totten.Solutions.ToBarber.Application\Totten.Solutions.ToBarber.Application.csproj", "{2ED68CD5-3B6B-4179-BA1F-F64616D7428C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Totten.Solutions.ToBarber.Application", "Totten.Solutions.ToBarber.Application\Totten.Solutions.ToBarber.Application.csproj", "{2ED68CD5-3B6B-4179-BA1F-F64616D7428C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Totten.Solutions.ToBarber.Infra.CrossCutting", "Totten.Solutions.ToBarber.Infra.CrossCutting\Totten.Solutions.ToBarber.Infra.CrossCutting.csproj", "{A72AC48D-F055-49FA-9707-9C808AB5C74C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Totten.Solutions.ToBarber.Infra.CrossCutting", "Totten.Solutions.ToBarber.Infra.CrossCutting\Totten.Solutions.ToBarber.Infra.CrossCutting.csproj", "{A72AC48D-F055-49FA-9707-9C808AB5C74C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{376FAE17-D0BF-478A-8379-E69C400D3AB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Totten.Solutions.ToBarber.Tests", "Totten.Solutions.ToBarber.Tests\Totten.Solutions.ToBarber.Tests.csproj", "{258D7D68-B8F8-4DE0-A886-30285557A859}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,10 @@ Global
 		{A72AC48D-F055-49FA-9707-9C808AB5C74C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A72AC48D-F055-49FA-9707-9C808AB5C74C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A72AC48D-F055-49FA-9707-9C808AB5C74C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{258D7D68-B8F8-4DE0-A886-30285557A859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{258D7D68-B8F8-4DE0-A886-30285557A859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{258D7D68-B8F8-4DE0-A886-30285557A859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{258D7D68-B8F8-4DE0-A886-30285557A859}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +71,7 @@ Global
 		{EC1F8BCC-44F9-42C8-8842-BDA3946A2958} = {951861D7-A46F-449A-97B2-D34478B07174}
 		{2ED68CD5-3B6B-4179-BA1F-F64616D7428C} = {B0AA291D-BE05-4501-B990-63BC0F433315}
 		{A72AC48D-F055-49FA-9707-9C808AB5C74C} = {F08554E3-0E8C-42A1-84FB-7837450E70F8}
+		{258D7D68-B8F8-4DE0-A886-30285557A859} = {376FAE17-D0BF-478A-8379-E69C400D3AB9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {94C19ECC-F35C-48D8-A471-C8AD15992648}
