@@ -4,5 +4,6 @@ namespace Totten.Solutions.ToBarber.Domain.Features.ProvidedServices
 {
     public interface IProvidedServiceRepository : IRepository<ProvidedService>
     {
+
     }
 }
