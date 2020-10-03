@@ -30,15 +30,16 @@ namespace Totten.Solutions.ToBarber.Application.Features.ProvidedServices.Handle
         {
             ProvidedService providedService = _mapper.Map<ProvidedService>(request);
 
-            Parallel.ForEach(request.EmployeesID,
-                             async id =>
-                             {
-                                 var employee = await _employeeRepository.GetByIdAsync(id);
 
-                                 if (employee.IsSuccess)
-                                     providedService.Employees.Add(employee.Success);
+            foreach (var employeesID in request.EmployeesID)
+            {
 
-                             });
+                var employee = await _employeeRepository.GetByIdAsync(employeesID);
+
+                if (employee.IsSuccess)
+                    providedService.Employees.Add(employee.Success);
+
+            }
 
 
             var entity = await _repository.CreateAsync(providedService);

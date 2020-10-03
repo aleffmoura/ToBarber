@@ -18,7 +18,7 @@ namespace Totten.Solutions.ToBarber.Domain.Features.ProvidedServices
         public Guid CompanyId { get; set; }
 
         public string Name { get; set; }
-        public decimal Value { get; set ; }
+        public decimal Value { get; set; }
         public TimeSpan Duration { get; set ; }
         public List<Employee> Employees { get; set; }
         public virtual Company Company { get; set; }

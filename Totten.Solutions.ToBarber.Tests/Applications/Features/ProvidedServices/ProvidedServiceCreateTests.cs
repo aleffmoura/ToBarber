@@ -14,14 +14,14 @@ using Totten.Solutions.ToBarber.Tests.Commons.ObjectMothers;
 namespace Totten.Solutions.ToBarber.Tests.Applications.Features.ProvidedServices
 {
     [TestFixture]
-    public class ProvidedServiceCreate
+    public class ProvidedServiceCreateTests
     {
         private Mock<IMapper> _mockMapper;
         private Mock<IProvidedServiceRepository> _mockProvidedServiceRepository;
         private Mock<IEmployeeRepository> _mockEmployeeRepository;
         private ProvidedServiceCreateHandler _providedServiceCreateHandler;
 
-        public ProvidedServiceCreate()
+        public ProvidedServiceCreateTests()
         {
             _mockMapper = new Mock<IMapper>();
             _mockProvidedServiceRepository = new Mock<IProvidedServiceRepository>();
@@ -31,8 +31,6 @@ namespace Totten.Solutions.ToBarber.Tests.Applications.Features.ProvidedServices
             _providedServiceCreateHandler = new ProvidedServiceCreateHandler(_mockMapper.Object, _mockProvidedServiceRepository.Object, _mockEmployeeRepository.Object);
         }
 
-        private static Task<Result<Exception, T>> ReturnTask<T>(T providedService)
-            => Task.Run(() => Result.Run(() => providedService));
 
 
         [Test]
@@ -40,18 +38,19 @@ namespace Totten.Solutions.ToBarber.Tests.Applications.Features.ProvidedServices
         {
             //arrange
             var createCommand = ObjectMother.ValidProvidedServiceCommand;
-            var providedService = ObjectMother.ValidProvidedService;
+            var providedService = ObjectMother.ValidProvidedServiceTanning;
 
             _mockMapper.Setup(map => map.Map<ProvidedService>(createCommand))
                        .Returns(providedService);
 
             _mockEmployeeRepository.Setup(emp => emp.GetByIdAsync(It.IsAny<Guid>()))
-                                    .Returns(ReturnTask(new Employee()));
+                                    .Returns(CommonValues.ReturnTask(new Employee()));
 
             _mockProvidedServiceRepository.Setup(rep => rep.CreateAsync(providedService))
-                                          .Returns(ReturnTask(providedService))
+                                          .Returns(CommonValues.ReturnTask(providedService))
                                           .Callback((ProvidedService item) =>
                                           {
+                                              item.Id = Guid.NewGuid();
                                               item.Version++;
                                               item.CreatedAt = DateTime.Now;
                                           });

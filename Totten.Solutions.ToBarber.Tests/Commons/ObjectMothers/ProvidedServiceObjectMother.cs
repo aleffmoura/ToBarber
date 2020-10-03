@@ -17,12 +17,29 @@ namespace Totten.Solutions.ToBarber.Tests.Commons.ObjectMothers
             Value = Decimal.Parse("25.50")
         };
 
-        public static ProvidedService ValidProvidedService => new ProvidedService
+        public static ProvidedService ValidProvidedServiceTanning => new ProvidedService
         {
             CompanyId = ValidProvidedServiceCommand.CompanyId,
             Duration = ValidProvidedServiceCommand.Duration,
-            Id = Guid.NewGuid(),
             Name = ValidProvidedServiceCommand.Name,
+            Value = ValidProvidedServiceCommand.Value,
+            UserCreatedId = ValidProvidedServiceCommand.UserCreatedId
+        };
+
+        public static ProvidedService ValidProvidedServicNail => new ProvidedService
+        {
+            CompanyId = ValidProvidedServiceCommand.CompanyId,
+            Duration = ValidProvidedServiceCommand.Duration,
+            Name = "Unha",
+            Value = ValidProvidedServiceCommand.Value,
+            UserCreatedId = ValidProvidedServiceCommand.UserCreatedId
+        };
+
+        public static ProvidedService ValidProvidedServicHairColoring => new ProvidedService
+        {
+            CompanyId = ValidProvidedServiceCommand.CompanyId,
+            Duration = ValidProvidedServiceCommand.Duration,
+            Name = "Pintura de Cabelo",
             Value = ValidProvidedServiceCommand.Value,
             UserCreatedId = ValidProvidedServiceCommand.UserCreatedId
         };

@@ -19,4 +19,9 @@
     <ProjectReference Include="..\Totten.Solutions.ToBarber.Application\Totten.Solutions.ToBarber.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Applications\Features\Employees\" />
+    <Folder Include="Applications\Features\Companies\" />
+  </ItemGroup>
+
 </Project>
