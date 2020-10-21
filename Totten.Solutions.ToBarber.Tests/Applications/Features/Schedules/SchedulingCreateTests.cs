@@ -61,10 +61,11 @@ namespace Totten.Solutions.ToBarber.Tests.Applications.Features.Schedules
                                           .Returns(CommonValues.ReturnTask(ObjectMother.ValidProvidedServiceTanning));
 
             _mockSchedulingRepository.Setup(sch => sch.CreateAsync(validToCreate))
-                                     .Callback((Scheduling item) => {
+                                     .Callback((Scheduling item) =>
+                                     {
                                          item.CreatedAt = DateTime.Now;
                                          item.Id = Guid.NewGuid();
-                                      })
+                                     })
                                      .Returns(CommonValues.ReturnTask(validToCreate));
 
             //action
